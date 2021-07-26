@@ -1,0 +1,42 @@
+{
+    "name": "async",
+    "version": "1.0.0",
+    "description": "node async",
+    "main": "app.js",
+    "author": "Dmitriy",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint --debug src/",
+        "lint:write": "eslint --debug src/ --fix",
+        "prettier": "prettier --write src/**/*.js"
+    },
+    "dependencies": {
+        "mysql2": "^2.2.5"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "YOUR_COMMAND_HERE",
+            "pre-push": "YOUR_COMMAND_HERE"
+        }
+    },
+    "lint-staged": {
+        "*.(js|jsx)": [
+            "npm run lint:write",
+            "git add"
+        ]
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.31.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-jest-enzyme": "^7.1.2",
+        "eslint-plugin-babel": "^5.3.1",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^7.0.1",
+        "lint-staged": "^11.1.1",
+        "prettier": "^2.3.2",
+        "prettier-eslint": "^12.0.0"
+    }
+}
